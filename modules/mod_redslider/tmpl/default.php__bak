@@ -1,0 +1,110 @@
+<?php
+/**
+ * @version     1.0
+ * @package     Joomla
+ * @subpackage  com_redslider
+ * @author      redWEB Aps <khai@redweb.dk>
+ * @copyright   com_redslider (C) 2008 - 2012 redCOMPONENT.com
+ * @license     GNU/GPL, see LICENSE.php
+ * com_redslider can be downloaded from www.redcomponent.com
+ * com_redslider is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License 2
+ * as published by the Free Software Foundation.
+ * com_redslider is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with com_redslider; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ **/
+
+// No direct access
+defined('_JEXEC') or die;
+
+$document = JFactory::getDocument();
+
+// Load JS
+if ($params->get('load_jquery'))
+{
+	$path = JURI::base(true) . '/modules/mod_redslider/assets/js/jquery.min.js';
+	$document->addScript($path);
+}
+
+$path = JURI::base(true) . '/modules/mod_redslider/assets/plugins/jquery.fitvids.js';
+//echo "<script type='text/javascript' src='$path'></script>";
+$document->addScript($path);
+
+$path = JURI::base(true) . '/modules/mod_redslider/assets/js/jquery.bxslider.min.js';
+//echo "<script type='text/javascript' src='$path'></script>";
+$document->addScript($path);
+
+// Pre process params from module
+$slide_width = preg_replace('/[^0-9]/', '', $params->get('slide_width', 0));
+$slide_height = preg_replace('/[^0-9]/', '', $params->get('slide_height', 0));
+$adaptive_height = $params->get('adaptive_height', 1);
+$slide_controls = $params->get('slide_controls', 1);
+$pager = $params->get('pager', 0);
+$thumbnail = $params->get('thumbnail', 0);
+$thumbnail_width = preg_replace('/[^0-9]/', '', $params->get('thumbnail_width', 0));
+$thumbnail_height = preg_replace('/[^0-9]/', '', $params->get('thumbnail_height', 0));
+$thumbnail_controls = $params->get('thumbnail_controls', 1);
+$num_of_thumbnails = $params->get('num_of_thumbnails', 4);
+$animation_effect = $params->get('animation_effect', 'fade');
+$auto_play = $params->get('auto_play', 0);
+$pause_when_mouserover = $params->get('pause_when_mouseover', 0);
+$display_time = $params->get('display_time', 5000);
+$transition_duration = $params->get('transition_duration');
+
+echo '<script type="text/javascript">
+		var module_id = ' . $module->id . ';
+		var slide_width_' . $module->id . ' = ' . $slide_width . ';
+		var slide_height_' . $module->id . ' = ' . $slide_height . ';
+		var adaptive_height = ' . $adaptive_height . ';
+		var bxslider_controls = ' . $slide_controls . ';
+		var pager = ' . $pager . ';
+		var thumbnail = ' . $thumbnail . ';
+		var thumbnail_width = ' . $thumbnail_width . ';
+		var thumbnail_height = ' . $thumbnail_height . ';
+		var thumbnail_controls = ' . $thumbnail_controls . ';
+		var num_of_thumbnails = ' . $num_of_thumbnails . ';
+		var animation_effect = "' . $animation_effect . '";
+		var auto_play = ' . $auto_play . ';
+		var pause_when_mouseover = ' . $pause_when_mouserover . ';
+		var display_time = ' . $display_time . ';
+		var transition_duration = ' . $transition_duration . ';
+	</script>';
+
+$path = JURI::base(true) . '/modules/mod_redslider/assets/js/redslider.js';
+//echo "<script type='text/javascript' src='$path'></script>";
+$document->addScript($path);
+
+// Load CSS
+$document->addStyleSheet(JURI::base(true) . '/modules/mod_redslider/assets/css/jquery.bxslider.css');
+$document->addStyleSheet(JURI::base(true) . '/modules/mod_redslider/assets/css/redslider.css');
+
+// Create thumb image
+modRedSliderHelper::createImg($slide_list, $slide_width, $slide_height, $thumbnail, $thumbnail_width, $thumbnail_height, $module->id);
+?>
+
+<div class="redslider_<?php echo $module->id; ?><?php echo $moduleclass_sfx; ?>">
+
+	<ul class="bxslider_<?php echo $module->id; ?>">
+		<?php foreach ($slide_list as $slide): ?>
+			<?php require JModuleHelper::getLayoutPath('mod_redslider', 'default_' . $slide->type); ?>
+		<?php endforeach;?>
+	</ul>
+
+	<?php if ($thumbnail): ?>
+		<div class="gallery_<?php echo $module->id; ?>">
+			<?php foreach ($slide_list as $key => $slide): ?>
+				<div class="slide">
+					<a data-slide-index="<?php echo $key; ?>">
+						<img src="<?php echo $slide->imgthumb; ?>">
+					</a>
+				</div>
+			<?php endforeach; ?>
+		</div>
+	<?php endif; ?>
+
+</div>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="template" method="upgrade" client="site">
+	<name>redGADGETS</name>
+	<creationDate>March 2014</creationDate>
+	<author>redCOMPONENT</author>
+	<authorEmail>mail@redcomponent.com</authorEmail>
+	<authorUrl>http://www.redcomponent.com</authorUrl>
+	<copyright>Copyright redComponent 2014. All rights reserved</copyright>
+	<license>GNU/GPL v.3 or later.</license>
+	<version>1.0.0</version>
+	<description>TPL_REDGADGETS_XML_DESCRIPTION</description>
+
+	<files>
+		<filename>error.php</filename>
+		<filename>component.php</filename>
+		<filename>functions.php</filename>
+		<filename>index.php</filename>
+		<filename>template.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>favicons</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>wright</folder>
+		<folder>fonts</folder>
+	</files>
+
+	<positions>
+		<position>topbar</position>
+		<position>logo</position>
+		<position>top</position>
+		<position>top2</position>
+		<position>menu</position>
+		<position>search</position>
+		<position>featured</position>
+		<position>slider</position>
+		<position>grid-tab-1</position>
+		<position>grid-top</position>
+		<position>grid-tab</position>
+		<position>grid-manu</position>
+		<position>above-content</position>
+		<position>breadcrumbs</position>
+		<position>sidebar1</position>
+		<position>sidebar2</position>
+		<position>below-content</position>
+		<position>grid-bottom</position>
+		<position>bottom-menu</position>
+		<position>footer</position>
+		<position>footer-bottom</position>
+		<position>copyright</position>
+	</positions>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_redgadgets.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_redgadgets.sys.ini</language>
+	</languages>
+
+
+	<config>
+		<fields name="params" addfieldpath="/templates/redgadgets/wright/parameters/joomla_2.5">
+			<fieldset name="basic">
+				<!-- Start of default Wright params -->
+
+				<field name="rebrand" type="hidden" default="yes" />
+				<field name="style" type="hidden" default="generic" />
+				<field name="jquery" type="list" default="1" label="TPL_REDGADGETS_FIELD_LOAD_JQUERY_LABEL" description="TPL_REDGADGETS_FIELD_LOAD_JQUERY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">TPL_REDGADGETS_FIELD_LOAD_JQUERY_YES_LOCALLY</option>
+					<option value="2">TPL_REDGADGETS_FIELD_LOAD_JQUERY_YES_GOOGLE</option>
+				</field>
+				<field name="javascriptBottom" type="list" default="1" label="TPL_REDGADGETS_FIELD_JAVASCRIPT_BOTTOM" description="TPL_REDGADGETS_FIELD_JAVASCRIPT_BOTTOM_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logo" type="logo" default="template" label="TPL_REDGADGETS_FIELD_LOGO_IMAGE_LABEL" description="TPL_REDGADGETS_FIELD_LOGO_IMAGE_DESC" />
+				<field name="logowidth" type="grid" default="6" label="TPL_REDGADGETS_FIELD_LOGO_WIDTH_LABEL" description="TPL_REDGADGETS_FIELD_LOGO_WIDTH_DESC" />
+				<field name="body_font" type="typography" default="default" label="TPL_REDGADGETS_FIELD_BODY_FONT_LABEL" description="TPL_REDGADGETS_FIELD_BODY_FONT_DESC" />
+				<field name="header_font" type="typography" default="default" label="TPL_REDGADGETS_FIELD_HEADING_FONT_LABEL" description="TPL_REDGADGETS_FIELD_HEADING_FONT_DESC" />
+				<field name="columns" type="hidden" default="sidebar1:2;main:7;sidebar2:3" />
+
+				<field name="buttonspacer" label="TPL_REDGADGETS_BOOTSTRAP_TITLE_LABEL" description="TPL_REDGADGETS_BOOTSTRAP_TITLE_DESC" type="spacer" />
+				<field name="columns" type="columns" default="sidebar1:3;main:6;sidebar2:3" sidebars="2" label="TPL_REDGADGETS_FIELD_COLUMNS_LABEL" description="TPL_REDGADGETS_FIELD_COLUMNS_LABEL_DESC" />
+
+				<field name="stickyFooter" type="list" default="1" label="TPL_REDGADGETS_FIELD_STICKY_FOOTER" description="TPL_REDGADGETS_FIELD_STICKY_FOOTER_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!-- End of default Wright params -->
+
+				<field name="backgroundimage" type="imagelist" directory="/images" label="TPL_REDGADGETS_BACKGROUND_IMAGE" description="TPL_REDGADGETS_BACKGROUND_IMAGE" />
+				<field name="backgroundposition" type="list" default="tile" label="TPL_REDGADGETS_BACKGROUND_POSITION" description="TPL_REDGADGETS_BACKGROUND_POSITION">
+					<option value="tile">TPL_REDGADGETS_BACKGROUND_TILE</option>
+					<option value="fullwindow">TPL_REDGADGETS_BACKGROUND_FULLWINDOW</option>
+				</field>
+
+				<field name="hiddenmodule" type="Modules" multiple="true" size="20" label="Hidden modules in phone" description="Hidden modules in phone" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

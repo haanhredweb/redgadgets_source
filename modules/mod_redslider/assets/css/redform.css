@@ -1,0 +1,138 @@
+.redslider {
+    /* background: url("../images/box-shadow.png") repeat scroll 0 0 transparent;*/
+   /* border: 5px solid #FFFFFF;
+    box-shadow: 0 1px 4px #D0D0D0;*/
+    color: #000;
+    font-family: arial,sans-serif;
+}
+.redslider p{
+    font-size: 14px;
+}
+.bx-wrapper{
+    position: relative;
+}
+
+.bx-wrapper .bx-prev {
+    background: url("../images/pre.png") no-repeat scroll 0 0 transparent;
+    left: -11px;
+}
+.bx-wrapper .bx-next {
+    background: url("../images/next.png") no-repeat scroll 0 0 transparent;
+    right: -11px;
+}
+
+.bxslider li{
+    background: url("../images/bg-redform.png") repeat;
+}
+.bxslider  form {
+    margin: 0;
+}
+.bxslider .fieldline {
+    clear: none;
+    float: left;
+    padding: 3px 0;
+}
+.bxslider div.background {
+    float: right;
+}
+.bxslider div.form-template {
+    float: left;
+    margin-left: 70px;
+    margin-top: 33px;
+    width: 48%;
+}
+
+.bxslider #fieldline_3, .bxslider #fieldline_3 .field  {
+    width: 100% !important;
+}
+.bxslider #fieldline_3 textarea{
+    height: 110px !important;
+    margin-bottom: 15px;
+    padding-right: 3px;
+    width: 89%;
+}
+.bx-pager-item {
+    float: left;
+    margin-right: 5px;
+}
+
+/*.bx-wrapper .bx-controls-direction a {
+    height: 38px;
+    margin-top: -16px;
+    outline: 0 none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 19px;
+    z-index: 9999;
+}*/
+
+.bx-wrapper .caption-description {
+    display: none ;
+}
+
+.bx-wrapper ul{
+    margin: 0;
+    padding: 0;
+}
+
+.form-template #formname {
+    float: none;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.caption-description p{
+    color: #DCDCDC;
+    font-size: 12.5px;
+    line-height: 16px;
+    margin: 0 0 10px;
+}
+.bx-pager-link, .bx-pager-link:hover {
+    background: url("../images/circle.png") no-repeat scroll center center transparent;
+    color: transparent !important;
+    font-size: 11px;
+    padding: 2px;
+    width: 20px !important;
+}
+
+.bx-pager-link.active, .bx-pager-link.active:hover{
+    background: url("../images/circle_active.png") no-repeat scroll center center transparent;
+    padding: 0 2px;
+}
+.bx-pager.bx-default-pager {
+    bottom: 2%;
+    position: absolute;
+    right: 10px;
+    z-index: 9999999;
+}
+.form-template .label, .form-template .fieldinfo {
+    display: none;
+}
+
+.form-template #regularsubmit{
+    background: url("../images/bg-button.png") repeat-x scroll 0 0 transparent !important;
+    border-color: #637700;
+    border-radius: 5px 5px 5px 5px;
+    border-style: none solid;
+    border-width: 0 1px;
+    color: #FFFFFF !important;
+    font-size: 22px;
+    font-weight: bold;
+    height: 49px;
+    padding: 0 20px 0px;
+    width: auto !important;
+}
+.form-template input, .form-template textarea {
+    background: #eeeeee !important;
+    border: 1px solid #999999 !important;
+    border-radius: 3px 3px 3px 3px;
+    color: #666666 !important;
+    height: 49px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    padding: 0 0 0 10px;
+    }

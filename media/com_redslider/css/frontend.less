@@ -1,0 +1,35 @@
+// Variables
+@colorOverdue: red;
+@colorClosing: #a90;
+@colorEnoughTime: green;
+@descriptionBorder: fadeout(blue, 90%);
+@descriptionBg: fadeout(yellow, 95%);
+@descriptionFg: white;
+@tableColor: white;
+@borderColor: #ccc;
+
+// Due date styling
+span {
+	&.redslider-due-overdue		{ color: @colorOverdue; }
+	&.redslider-due-closing		{ color: @colorClosing; }
+	&.redslider-due-enoughtime	{ color: @colorEnoughTime; }
+}
+
+table.adminlist {
+	border: none;
+	
+	thead { border: none; background-color: darken(@tableColor, 10%); }
+	th { border: none; }
+	tr {
+		border: none;
+		.row0 { background-color: @tableColor; }
+		.row1 { background-color: darken(@tableColor, 5%); }
+	}
+	td { border: none; }
+	tfoot {
+		td { padding-top: 30px; text-align: center }
+	}
+}
+
+.redslider-title-field { font-size: x-large; font-weight: bold; border-bottom: thin solid @borderColor; display: block; }
+#description { margin: 1em; padding: 0 1em; border: thin solid @descriptionBorder; background-color: @descriptionBg; border-radius: 5px; }

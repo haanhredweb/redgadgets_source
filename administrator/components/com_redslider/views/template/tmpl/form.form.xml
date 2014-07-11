@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form lessfiles="media://com_redslider/css/backend.less||media://com_redslider/css/backend.css">
+
+	<fieldset name="basic_configuration_group"
+		        label="COM_REDSLIDER_TEMPLATES_GROUP_BASIC"
+                labelclass="redslider-label"
+		        description="COM_REDSLIDER_TEMPLATES_GROUP_BASIC_DESC"
+		        class="span6">
+
+        <field name="name" type="text"
+			    class="inputbox"
+			    label="COM_REDSLIDER_TEMPLATES_FIELD_NAME"
+                labelclass="redslider-label"
+                required="true"
+			    size="40"/>
+
+        <field name="alias" type="text"
+               class="inputbox"
+               label="COM_REDSLIDER_TEMPLATES_FIELD_ALIAS"
+               labelclass="redslider-label"
+               size="40"/>
+
+        <field name="section" type="sectionpicker"
+               class="inputbox"
+               label="COM_REDSLIDER_TEMPLATES_FIELD_SECTION"
+               labelclass="redslider-label"
+               required="true"
+               size="1">
+            <option value="article">COM_REDSLIDER_TEMPLATES_OPTION_ARTICLE</option>
+            <option value="event">COM_REDSLIDER_TEMPLATES_OPTION_EVENT</option>
+            <!--<option value="form">COM_REDSLIDER_TEMPLATES_OPTION_FORM</option>-->
+            <option value="product">COM_REDSLIDER_TEMPLATES_OPTION_PRODUCT</option>
+        </field>
+
+		<field name="published" type="list" label="JSTATUS"
+                labelclass="redslider-label"
+			    description="JFIELD_PUBLISHED_DESC" class="inputbox"
+			    filter="intval" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+        <field name="redslider_template_id" type="text"
+               class="readonly"
+               label="COM_REDSLIDER_TEMPLATES_FIELD_ID"
+               labelclass="redslider-label"
+               size="40"/>
+	</fieldset>
+
+	<fieldset name="template_description_group"
+		        label="COM_REDSLIDER_TEMPLATES_GROUP_DESCRIPTION"
+		        description="COM_REDSLIDER_TEMPLATES_GROUP_DESCRIPTION_DESC"
+		        class="span6">
+
+		<field name="description" type="editor"
+			    label="" class="inputbox"
+                buttons="true"/>
+	</fieldset>
+
+</form>

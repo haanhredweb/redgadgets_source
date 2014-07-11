@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+
+		<fieldset name="advance_params" label="COM_REDSLIDER_FIELDSET_ADVANCE_PARAMS" >
+			<field name="form_id" type="formlist"
+				label="COM_REDSLIDER_LABEL_FORM"
+                description="COM_REDSLIDER_DESC_FORM"
+                labelclass="redslider-label"/>
+				
+			<field name="form_image" type="media"
+				label="COM_REDSLIDER_LABEL_FORM_IMAGE"
+                description="COM_REDSLIDER_DESC_FORM_IMAGE"
+                labelclass="redslider-label"/>
+		</fieldset>
+	</fields>
+
+   <!-- <fieldset name="advance_params">
+        <field name="redslider_template_id" type="templatepicker"
+               label="COM_REDSLIDER_LABEL_TEMPLATE"
+               description="COM_REDSLIDER_DESC_TEMPLATE"
+               labelclass="redslider-label"
+               section="form"/>
+    </fieldset>-->
+</form>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="general_params"
+				label="COM_REDSLIDER_FIELDSET_GENERAL_PARAMS">
+
+			<field name="background_image" type="image"
+				label="COM_REDSLIDER_LABEL_BACKGROUND_IMAGE"
+                labelclass="redslider-label"
+				description="COM_REDSLIDER_DESC_BACKGROUND_IMAGE" />
+			
+			<field name="caption" type="text"
+				label="COM_REDSLIDER_LABEL_CAPTION"
+                labelclass="redslider-label"
+				description="COM_REDSLIDER_DESC_CAPTION"
+				size="40" class="inputbox" />
+
+			<field name="description" type="textarea"
+				label="COM_REDSLIDER_LABEL_DESCRIPTION"
+                labelclass="redslider-label"
+				description="COM_REDSLIDER_DESC_DESCRIPTION"
+				rows="3" cols="35" />
+
+            <field name="link" type="url" filter="url"
+                   label="COM_REDSLIDER_LABEL_LINK"
+                   labelclass="redslider-label"
+                   description="COM_REDSLIDER_DESC_LINK"
+                   size="40" class="inputbox"/>
+
+            <field name="link_text" type="text"
+                   label="COM_REDSLIDER_LABEL_TEXT_LINK"
+                   labelclass="redslider-label"
+                   description="COM_REDSLIDER_DESC_TEXT_LINK"
+                   size="40" class="inputbox" />
+
+            <field name="class_sfx" type="text"
+                   label="COM_REDSLIDER_LABEL_SUFFIX_CLASS"
+                   labelclass="redslider-label"
+                   description="COM_REDSLIDER_DESC_SUFFIX_CLASS"
+                   size="20" class="inputbox" />
+        </fieldset>
+	</fields>
+</form>

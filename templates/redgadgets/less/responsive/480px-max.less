@@ -1,0 +1,138 @@
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+
+@media (max-width: 480px) {
+	#header
+	{
+		#logo
+		{
+			width: 100%;
+			float: left;
+			margin-top: 0px;
+			text-align: center;
+
+			img{
+				display: inline-block;
+			}
+		}
+
+		#top
+		{
+			width: 100%;
+			float: left;
+			padding-left: 15px;
+			right: 0px;
+			position: relative;
+		}
+
+		height: auto;
+		margin-bottom: 0px;
+
+		#top_primary
+		{
+			margin-top: 10px;
+
+			.moduletable .mod_cart_main .mod_cart_bottom
+			{
+				width: 150%;
+			}
+		}
+	}
+
+	.bx-wrapper 
+	{
+		.bx-viewport ul li
+		{
+			.caption-description
+			{
+				p{
+					display: none;
+				}
+
+				h1{
+					.fontsize(30);
+				}
+			}
+		}
+
+		.bx-controls-direction
+		{
+			display: none;
+		}
+	}
+
+	#grid-bottom > div
+	{
+		.redshop_newsletter
+		{
+			.redshop_newsletter_input_email
+			{
+				width: 65%;
+			}
+
+			.redshop_newsletter_buttons
+			{
+				width: 35%;
+
+				.redshop_newsletter_tilmeld
+				{
+					/*padding: 10px;*/
+				}
+			}
+		}
+		
+		.menu.nav
+		{
+			li
+			{
+				width: 100%;
+				display: block;
+
+				> span{
+					display: none;
+				}
+			}
+		}
+	}
+
+	.cartproducts
+	{
+		.tdupdatecart
+		{
+			input
+			{
+				width: 35px;
+			}
+		}
+	}
+
+	.footer .module .mod_redshop_social ul li
+	{
+		padding: 0 10px;
+	}
+
+	.adproduct
+	{
+		font-size: 1.5em !important;
+	}
+
+	.module, .moduletable, .modulemenu
+	{
+		&-products
+		{
+			.mod_redshop_products_wrapper
+			{
+				.mod_redshop_products_horizontal
+				{
+					width: percentage(1/2);
+				}
+			}
+		}
+	}
+
+	.category_product_wishlist, .category_product_compare
+	{
+		margin-left: 5px !important;
+	}
+}

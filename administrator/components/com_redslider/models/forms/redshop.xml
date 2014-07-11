@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="advance_params"
+				label="COM_REDSLIDER_FIELDSET_ADVANCE_PARAMS"
+                addfieldpath="/administrator/components/com_redshop/elements">
+			
+			<field name="product_id" type="products"
+				label="COM_REDSLIDER_LABEL_PRODUCT"
+                labelclass="redslider-label"
+				description="COM_REDSLIDER_DESC_PRODUCT"/>
+				
+			<field name="product_image" type="media"
+				label="COM_REDSLIDER_LABEL_PRODUCT_IMAGE"
+                labelclass="redslider-label"
+				description="COM_REDSLIDER_DESC_PRODUCT_IMAGE" />
+		</fieldset>
+	</fields>
+
+    <fieldset name="advance_params">
+        <field name="redslider_template_id" type="templatepicker"
+               label="COM_REDSLIDER_LABEL_TEMPLATE"
+               description="COM_REDSLIDER_DESC_TEMPLATE"
+               labelclass="redslider-label"
+               section="product"/>
+    </fieldset>
+</form>

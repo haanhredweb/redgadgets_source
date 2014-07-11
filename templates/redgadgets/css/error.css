@@ -1,0 +1,40 @@
+.error {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background: url("../images/404.png") no-repeat scroll bottom center transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+#errorboxoutline
+{
+
+}
+#errorboxheader .oops
+{
+	color: #5f2712;
+	font-size: 30px;
+}
+
+#errorboxheader .div404
+{
+	color: #5f2712;
+	font-size: 150px;
+	line-height: 1;
+	margin-top: 10%;
+}
+
+#errorboxbody .btn
+{
+	margin-top: 40px;
+	margin-bottom: 20px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+#techinfo
+{
+	font-size: 16px;
+}

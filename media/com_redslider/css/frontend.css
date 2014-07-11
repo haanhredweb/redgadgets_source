@@ -1,0 +1,16 @@
+span.redslider-due-overdue { color: red; }
+span.redslider-due-closing { color: #a90; }
+span.redslider-due-enoughtime { color: green; }
+
+fieldset.redslider-item-description { border: thin solid #99f; padding: 10px; }
+fieldset.redslider-item-description legend { border: thin solid #99f; background: #009; color: white; font-weight: bold; }
+
+table.adminlist, table.adminlist th, table.adminlist td, table.adminlist tr { border: none; }
+table.adminlist td, table.adminlist th { padding: 2px }
+table.adminlist thead { background-color: #e0e0e0; }
+table.adminlist tr.row0 { background-color: #fff; }
+table.adminlist tr.row1 { background-color: #eef; }
+table.adminlist tfoot td { padding-top: 30px; text-align: center }
+
+.redslider-title-field { font-size: x-large; font-weight: bold; border-bottom: thin solid #ccc; display: block; }
+#description { margin: 1em; padding: 0 1em; border: thin solid #ccc; background-color: #f3ffff; border-radius: 5px; }

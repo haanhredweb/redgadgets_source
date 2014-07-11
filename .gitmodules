@@ -1,0 +1,3 @@
+[submodule "redtemplates-installation"]
+	path = redtemplates-installation
+	url = git@192.168.1.99:redwebvietnam/redtemplates-installation.git

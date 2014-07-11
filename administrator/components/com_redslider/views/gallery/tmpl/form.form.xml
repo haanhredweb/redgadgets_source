@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form lessfiles="media://com_redslider/css/backend.less||media://com_redslider/css/backend.css">
+
+	<fieldset name="basic_configuration"
+		        label="COM_REDSLIDER_GALLERIES_GROUP_BASIC"
+		        description="COM_REDSLIDER_GALLERIES_GROUP_BASIC_DESC"
+		        class="span6">
+
+        <field name="title" type="text"
+			    class="inputbox"
+			    label="COM_REDSLIDER_GALLERIES_FIELD_TITLE"
+                labelclass="redslider-label"
+			    required="true"
+			    size="40"/>
+
+        <field name="alias" type="text"
+               label="COM_REDSLIDER_GALLERIES_FIELD_ALIAS"
+               labelclass="redslider-label"
+               class="inputbox" size="40"/>
+
+		<field name="published" type="list"
+                label="COM_REDSLIDER_GALLERIES_FIELD_STATUS"
+                labelclass="redslider-label"
+			    class="inputbox" filter="intval"
+                size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+        <field name="language" type="list"
+               label="COM_REDSLIDER_GALLERIES_FIELD_LANGUAGE"
+               labelclass="redslider-label"
+               class="inputbox" filter="intval"
+               size="1" default="1">
+            <option value="All">JAll</option>
+            <option value="English">COM_REDSLIDER_ENGLISH</option>
+        </field>
+
+        <field name="redslider_gallery_id" type="text"
+               class="readonly"
+               label="COM_REDSLIDER_GALLERIES_FIELD_ID"
+               labelclass="redslider-label"
+               size="40"/>
+
+        <field name="created_by" type="user"
+               label="COM_REDSLIDER_GALLERIES_FIELD_USER"
+               labelclass="redslider-label"
+               class="inputbox" size="20"/>
+
+	</fieldset>
+
+</form>

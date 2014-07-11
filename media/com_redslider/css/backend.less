@@ -1,0 +1,26 @@
+// Variables
+@colorOverdue: red;
+@colorClosing: #a90;
+@colorEnoughTime: green;
+@labelBackground: rgba(0, 0, 0, 0.1);
+
+// Extension toolbar icon (big badge)
+.icon-48-redslider { background: transparent url(../../com_redslider/images/redslider-48.png) no-repeat !important; }
+
+// Due date styling
+span {
+	&.redslider-due-overdue		{ color: @colorOverdue; }
+	&.redslider-due-closing		{ color: @colorClosing; }
+	&.redslider-due-enoughtime	{ color: @colorEnoughTime; }
+}
+
+div.redslider-clear { clear: left; }
+
+.joomla-version-25 {
+	label {
+		&.redslider-label { min-width: 250px; background-color: @labelBackground; padding: 2px; margin-right: 10px; }
+		&.redslider-label-main { font-weight: bold; font-size: 120%; }
+	}
+}
+
+.redslider-title-field { display: block; font-size: x-large; font-weight: bold; border-bottom: thin solid gray; }

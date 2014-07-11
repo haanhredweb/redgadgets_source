@@ -1,0 +1,116 @@
+.redslider {
+   /* background: url("../images/box-shadow.png") repeat scroll 0 0 transparent;*/
+   /* border: 5px solid #FFFFFF;
+    box-shadow: 0 1px 4px #D0D0D0;*/
+    color: #FFFFFF;
+    font-family: arial,sans-serif;
+    position: relative;
+}
+
+.bx-wrapper:nth-child(2){
+    position: absolute;
+    right: -8px;
+    top: 0;
+    z-index: 99999;
+}
+
+.bx-wrapper:nth-child(2) .bx-viewport{
+    height: 100% !important;
+    max-height: 316px !important;
+}
+
+.gallery {
+    width: 100% !important;
+}
+
+.slide {
+    float: none !important;
+    height: auto !important;
+    width: 106px !important;
+}
+
+.bx-controls-direction .bx-prev, .bx-controls-direction .bx-next {
+    display: none !important;
+}
+
+.bx-has-pager .bx-controls-direction .bx-prev,
+.bx-has-pager .bx-controls-direction .bx-next{
+    display: block !important;
+}
+
+.bx-wrapper .bx-prev {
+    background: url("../images/pre-thumb.png") no-repeat scroll 0 0 transparent;
+    right: 0 !important;
+    top: 0 !important;
+}
+.bx-wrapper .bx-next {
+    background: url("../images/next-thumb.png") no-repeat scroll 0 0 transparent;
+    margin-top: -8px !important;
+    right: 15px;
+}
+.bxslider > div {
+    border: 5px solid #FFFFFF;
+}
+
+.bxslider img {
+    width: 100%;
+}
+
+/*.bx-wrapper .bx-controls-direction a {
+    height: 19px;
+    margin-top: -12px;
+    outline: 0 none;
+    position: absolute;
+    right: 15px !important;
+    text-indent: -9999px;
+    width: 38px;
+    z-index: 99999999;
+}*/
+
+.bx-wrapper .caption-description {
+    background: url("../images/bg-caption.png") repeat scroll 0 0 transparent;
+    bottom: 0;
+    padding: 10px 15px 10px 20px;
+    position: absolute;
+    width: 100%;
+}
+
+.bx-wrapper ul{
+    margin: 0;
+}
+
+.caption-description > h1 {
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 16px;
+    margin-top: 10px;
+}
+
+.caption-description p{
+    color: #DCDCDC;
+    font-size: 12.5px;
+    line-height: 16px;
+    margin: 0 0 10px;
+}
+.bx-pager-link, .bx-pager-link:hover {
+    background: url("../images/circle.png") no-repeat scroll center center transparent;
+    color: transparent !important;
+    font-size: 11px;
+    padding: 2px;
+    width: 20px !important;
+}
+
+.bx-pager-link.active, .bx-pager-link.active:hover{
+    background: url("../images/circle_active.png") no-repeat scroll center center transparent;
+    padding: 0 2px;
+}
+.bx-pager.bx-default-pager {
+    bottom: 2%;
+    position: absolute;
+    right: 10px;
+    z-index: 9999999;
+}
+.bx-pager-item {
+    float: left;
+    margin-right: 5px;
+}

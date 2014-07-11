@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){function e(){var e=jQuery(window).height()-jQuery(".wrapper-footer").height();e>jQuery(".wrapper-main > .container").height()?jQuery(".wrapper-main > .container").height(e-1):jQuery(".wrapper-main > .container").css("height","")}e(),jQuery(window).resize(function(){e()})});

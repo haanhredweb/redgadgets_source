@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>redShop Social</name>
+	<author>redweb.dk</author>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>mail@redcomponent.com</authorEmail>
+	<authorUrl>www.redcomponent.com</authorUrl>
+	<version>1.0</version>
+	<description>MOD_REDSHOP_SOCIAL_DESCRIPTION</description>
+	<files>
+		<filename module="mod_redshop_social">mod_redshop_social.php</filename>
+		<filename>index.html</filename>
+        <filename>helper.php</filename>
+		<folder>assets</folder>
+        <folder>tmpl</folder>
+	</files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_redshop_social.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_redshop_social.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="facebook_link" type="text" default="https://www.facebook.com/redCOMPONENT" label="Facebook" size="50"  />
+                <field name="twitter_link" type="text" default="https://twitter.com/redCOMPONENT" label="Twitter" size="50"  />
+                <field name="googleplus_link" type="text" default="https://plus.google.com" label="Google+" size="50"  />
+                <field name="linkedin_link" type="text" default="http://www.linkedin.com/" label="Linkedin" size="50"  />
+                <field name="youtube_link" type="text" default="http://www.youtube.com/" label="Youtube" size="50"  />
+                <field name="tumblr_link" type="text" default="http://www.tumblr.com/" label="Tumblr" size="50"  />
+                <field name="vimeo_link" type="text" default="http://www.vimeo.com/" label="Vimeo" size="50"  />
+                <field name="rss_link" type="text" default="" label="RSS" size="50"  />
+                <field name="pinterest_link" type="text" default="" label="Pinterest" size="50"  />
+
+                <field name="introtext" type="textarea" default="" label="Intro text" rows="10" cols="50" />
+            </fieldset>
+
+            <fieldset name="DISPLAY">
+                <field type="spacer" name="facebook" label="&lt;b&gt;Facebook&lt;/b&gt;" />
+                <field  name="facebook_show"
+                        type="list"
+                        label="MOD_REDSHOP_SOCIAL_FACEBOOK_SHOW"
+                        default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="facebook_order" type="text" default="1" label="MOD_REDSHOP_SOCIAL_FACEBOOK_ORDER" description="MOD_REDSHOP_SOCIAL_FACEBOOK_ORDER_DESC" size="5"  />
+                <field name="facebook_image" type="media" default="" label="MOD_REDSHOP_SOCIAL_FACEBOOK_IMAGE" description="MOD_REDSHOP_SOCIAL_FACEBOOK_IMAGE_DESC" size="20"  />
+
+                <field type="spacer" name="twitter" label="&lt;b&gt;Twitter&lt;/b&gt;" />
+                <field  name="twitter_show"
+                        type="list"
+                        label="MOD_REDSHOP_SOCIAL_TWITTER_SHOW"
+                        default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="twitter_order" type="text" default="2" label="MOD_REDSHOP_SOCIAL_TWITTER_ORDER" description="MOD_REDSHOP_SOCIAL_TWITTER_ORDER_DESC" size="5"  />
+                <field name="twitter_image" type="media" default="" label="MOD_REDSHOP_SOCIAL_TWITTER_IMAGE" description="MOD_REDSHOP_SOCIAL_TWITTER_IMAGE_DESC" size="20"  />
+
+                <field type="spacer" name="googleplus" label="&lt;b&gt;Google+&lt;/b&gt;" />
+                <field  name="googleplus_show"
+                        type="list"
+                        label="MOD_REDSHOP_SOCIAL_GOOGLEPLUS_SHOW"
+                        default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="googleplus_order" type="text" default="3" label="MOD_REDSHOP_SOCIAL_GOOGLEPLUS_ORDER" description="MOD_REDSHOP_SOCIAL_GOOGLEPLUS_ORDER_DESC" size="5"  />
+                <field name="googleplus_image" type="media" default="" label="MOD_REDSHOP_SOCIAL_GOOGLEPLUS_IMAGE" description="MOD_REDSHOP_SOCIAL_GOOGLEPLUS_IMAGE_DESC" size="20"  />
+
+                <field type="spacer" name="linkedin" label="&lt;b&gt;Linkedin&lt;/b&gt;" />
+                <field  name="linkedin_show"
+                        type="list"
+                        label="MOD_REDSHOP_SOCIAL_LINKEDIN_SHOW"
+                        default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="linkedin_order" type="text" default="4" label="MOD_REDSHOP_SOCIAL_LINKEDIN_ORDER" description="MOD_REDSHOP_SOCIAL_LINKEDIN_ORDER_DESC" size="5"  />
+                <field name="linkedin_image" type="media" default="" label="MOD_REDSHOP_SOCIAL_LINKEDIN_IMAGE" description="MOD_REDSHOP_SOCIAL_LINKEDIN_IMAGE_DESC" size="20"  />
+
+                <field type="spacer" name="youtube" label="&lt;b&gt;Youtube&lt;/b&gt;" />
+                <field  name="youtube_show"
+                        type="list"
+                        label="MOD_REDSHOP_SOCIAL_YOUTUBE_SHOW"
+                        default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="youtube_order" type="text" default="5" label="MOD_REDSHOP_SOCIAL_YOUTUBE_ORDER" description="MOD_REDSHOP_SOCIAL_YOUTUBE_ORDER_DESC" size="5"  />
+                <field name="youtube_image" type="media" default="" label="MOD_REDSHOP_SOCIAL_YOUTUBE_IMAGE" description="MOD_REDSHOP_SOCIAL_YOUTUBE_IMAGE_DESC" size="20"  />
+
+                <field type="spacer" name="tumblr" label="&lt;b&gt;Tumblr&lt;/b&gt;" />
+                <field  name="tumblr_show"
+                        type="list"
+                        label="MOD_REDSHOP_SOCIAL_TUMBLR_SHOW"
+                        default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="tumblr_order" type="text" default="6" label="MOD_REDSHOP_SOCIAL_TUMBLR_ORDER" description="MOD_REDSHOP_SOCIAL_TUMBLR_ORDER_DESC" size="5"  />
+                <field name="tumblr_image" type="media" default="" label="MOD_REDSHOP_SOCIAL_TUMBLR_IMAGE" description="MOD_REDSHOP_SOCIAL_TUMBLR_IMAGE_DESC" size="20"  />
+
+                <field type="spacer" name="vimeo" label="&lt;b&gt;Vimeo&lt;/b&gt;" />
+                <field  name="vimeo_show"
+                        type="list"
+                        label="MOD_REDSHOP_SOCIAL_VIMEO_SHOW"
+                        default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="vimeo_order" type="text" default="7" label="MOD_REDSHOP_SOCIAL_VIMEO_ORDER" description="MOD_REDSHOP_SOCIAL_VIMEO_ORDER_DESC" size="5"  />
+                <field name="vimeo_image" type="media" default="" label="MOD_REDSHOP_SOCIAL_VIMEO_IMAGE" description="MOD_REDSHOP_SOCIAL_VIMEO_IMAGE_DESC" size="20"  />
+
+                <field type="spacer" name="rss" label="&lt;b&gt;RSS&lt;/b&gt;" />
+                <field  name="rss_show"
+                        type="list"
+                        label="MOD_REDSHOP_SOCIAL_RSS_SHOW"
+                        default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="rss_order" type="text" default="8" label="MOD_REDSHOP_SOCIAL_RSS_ORDER" description="MOD_REDSHOP_SOCIAL_RSS_ORDER_DESC" size="5"  />
+                <field name="rss_image" type="media" default="" label="MOD_REDSHOP_SOCIAL_RSS_IMAGE" description="MOD_REDSHOP_SOCIAL_RSS_IMAGE_DESC" size="20"  />
+
+                <field type="spacer" name="pinterest" label="&lt;b&gt;Pinterest&lt;/b&gt;" />
+                <field  name="pinterest_show"
+                        type="list"
+                        label="MOD_REDSHOP_SOCIAL_PINTEREST_SHOW"
+                        default="1">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="pinterest_order" type="text" default="8" label="MOD_REDSHOP_SOCIAL_PINTEREST_ORDER" description="MOD_REDSHOP_SOCIAL_PINTEREST_ORDER_DESC" size="5"  />
+                <field name="pinterest_image" type="media" default="" label="MOD_REDSHOP_SOCIAL_PINTEREST_IMAGE" description="MOD_REDSHOP_SOCIAL_PINTEREST_IMAGE_DESC" size="20"  />
+
+            </fieldset>
+
+
+            <fieldset name="advanced">
+
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field name="moduleclass_sfx" type="text"
+                       label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field name="cachemode" type="hidden" default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>

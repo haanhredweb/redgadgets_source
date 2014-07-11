@@ -1,0 +1,118 @@
+.redslider {
+   /* background: url("../images/box-shadow.png") repeat scroll 0 0 transparent;*/
+    /*border: 5px solid #FFFFFF;
+    box-shadow: 0 1px 4px #D0D0D0;*/
+    color: #ffffff;
+    font-family: arial,sans-serif;
+}
+.redslider p{
+    font-size: 14px;
+}
+.bx-wrapper{
+    position: relative;
+}
+
+.bx-wrapper .bx-prev {
+    background: url("../images/pre.png") no-repeat scroll 0 0 transparent;
+    left: -11px;
+}
+.bx-wrapper .bx-next {
+    background: url("../images/next.png") no-repeat scroll 0 0 transparent;
+    right: 54.39%;
+}
+.bxslider > div {
+    border: 5px solid #FFFFFF;
+}
+
+.bxslider  form {
+    margin: 0;
+}
+.bxslider img {
+    width: 100%;
+}
+
+/*.bx-wrapper .bx-controls-direction a {
+    height: 38px;
+    margin-top: -16px;
+    outline: 0 none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 19px;
+    z-index: 9999;
+}*/
+
+.bx-wrapper .caption-description {
+    display: none ;
+}
+.bx-wrapper ul{
+    margin: 0;
+    padding: 0;
+}
+
+.event-template h2 {
+    font-size: 27px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.event-template h4 {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0 0 30px;
+}
+.caption-description p{
+    color: #DCDCDC;
+    font-size: 12.5px;
+    line-height: 16px;
+    margin: 0 0 10px;
+}
+.bx-pager-link, .bx-pager-link:hover {
+    background: url("../images/circle.png") no-repeat scroll center center transparent;
+    color: transparent !important;
+    font-size: 11px;
+    padding: 2px;
+    width: 20px !important;
+}
+
+.bx-pager-link.active, .bx-pager-link.active:hover{
+    background: url("../images/circle_active.png") no-repeat scroll center center transparent;
+    padding: 0 2px;
+}
+.bx-pager.bx-default-pager {
+    bottom: 2%;
+    position: absolute;
+    right: 57%;
+    z-index: 9999999;
+}
+
+.bxslider div {
+    float: right;
+    width: 55%;
+}
+.bxslider div.event-template {
+    width: 45% !important;
+    padding: 0 65px 0 70px;
+}
+.bxslider li {
+    background: url("../images/event-bg.png") repeat-x scroll 0 0 transparent;
+}
+.bx-pager .bx-pager-item {
+    float: left;
+    /*margin-right: 5px;*/
+}
+.event-button{
+    background: url("../images/bg-button.png") repeat-x scroll 0 0 transparent;
+    border-color: #637700;
+    border-radius: 7px;
+    border-style: none solid;
+    border-width: 0 1px;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: bold;
+    height: 46px;
+    padding: 0 20px 0px;
+    margin-top: 20px;
+    width: auto !important;
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>MOD_SIMPLE_GMAP</name>
+	<version>2.0</version>
+	<creationDate>October 2013</creationDate>
+	<author>redCOMPONENT.com</author>
+	<authorEmail>thong@redweb.dk</authorEmail>
+	<copyright>redCOMPONENT.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>MOD_SIMPLE_GMAP_DESCRIPTION</description>
+	<redcore version="1.0" />
+	<files>
+		<filename module="mod_simple_gmap">mod_simple_gmap.php</filename>
+		<filename module="mod_simple_gmap">tmpl/default.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_simple_gmap.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_simple_gmap.sys.ini</language>
+		<language tag="da-DK">language/da-DK/da-DK.mod_simple_gmap.ini</language>
+		<language tag="da-DK">language/da-DK/da-DK.mod_simple_gmap.sys.ini</language>
+	</languages>
+	<media folder="media">
+		<folder>mod_simple_gmap</folder>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="gmap_width"
+					type="text"
+					default="100%"
+					label="MOD_SIMPLE_GMAP_WIDTH"
+					description="MOD_SIMPLE_GMAP_WIDTH_DESC"
+					/>
+				<field
+					name="gmap_height"
+					type="text"
+					default="300px"
+					label="MOD_SIMPLE_GMAP_HEIGHT"
+					description="MOD_SIMPLE_GMAP_HEIGHT_DESC"
+					/>
+				<field
+					name="gmap_zoom"
+					type="text"
+					default="5"
+					label="MOD_SIMPLE_GMAP_ZOOM"
+					description="MOD_SIMPLE_GMAP_ZOOM_DESC"
+					/>
+				<field
+					name="gmap_latlng"
+					type="text"
+					default="55.22811,10.21298"
+					label="MOD_SIMPLE_GMAP_LATLNG"
+					description="MOD_SIMPLE_GMAP_LATLNG_DESC"
+					/>
+				<field
+					name="gmap_pinicon"
+					type="media"
+					default=""
+					label="MOD_SIMPLE_GMAP_PIN_ICON"
+					description="MOD_SIMPLE_GMAP_PIN_ICON_DESC"
+					/>
+			</fieldset>
+			<fieldset name="MOD_SIMPLE_INFOWINDOW">
+				<field 
+					name="inforbox"
+					type="editor"
+					cols="80"
+					filter="safehtml"
+					buttons="true"
+					label=""
+				/>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

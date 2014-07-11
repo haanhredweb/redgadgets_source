@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="params">
+
+        <fieldset name="advance_params"
+                  label="COM_REDSLIDER_FIELDSET_ADVANCE_PARAMS">
+
+            <field name="video_link" type="url" filter="url"
+                   label="Video Link"
+                   labelclass="redslider-label"
+                   description="Video Link"
+                   size="40" class="inputbox"/>
+
+            <field name="vimeo_color" type="color" default="#00adef"
+                   label="Vimeo color"
+                   labelclass="redslider-label"
+                   description="Vimeo color"
+                   size="40" class="inputbox"/>
+
+            <field name="vimeo_portrait" type="list" default="1"
+                   label="Vimeo portrait"
+                   labelclass="redslider-label"
+                   description="Vimeo portrait">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </field>
+
+            <field name="vimeo_title" type="list" default="1"
+                   label="Vimeo title"
+                   labelclass="redslider-label"
+                   description="Vimeo title">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </field>
+
+            <field name="vimeo_byline" type="list" default="1"
+                   label="Vimeo byline"
+                   labelclass="redslider-label"
+                   description="Vimeo byline">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </field>
+        </fieldset>
+
+    </fields>
+</form>

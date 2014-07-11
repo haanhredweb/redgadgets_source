@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	This form file is only loaded on Joomla! 2.5. The difference? It puts the
+	ordering field first, because it's not a drag'n'drop reordering handle!
+-->
+<form lessfiles="media://com_redslider/css/backend.less||media://com_redslider/css/backend.css"
+    type="browse" show_header="1" show_filters="0" show_pagination="1"
+	norows_placeholder="COM_REDSLIDER_COMMON_NORECORDS">
+
+    <headerset>
+        <header name="redslider_slide_id" type="rowselect" tdwidth="20" />
+		<header name="title" type="fieldsearchable" sortable="true" buttons="yes" buttonclass="btn"/>
+        <header name="gallery" type="field" sortable="false" tdwidth="12%" />
+		<header name="type" type="field" sortable="true" tdwidth="12%" />
+		<header name="published" type="published" sortable="true" tdwidth="5%" />
+        <header name="ordering" type="ordering" sortable="true" tdwidth="7%" />
+        <header name="language" type="field" sortable="true" tdwidth="5%" />
+	</headerset>
+
+	<fieldset name="items">
+        <field name="redslider_slide_id" type="selectrow"/>
+        <field name="title" type="text" show_link="true"  empty_replacement="(no title)" url="index.php?option=com_redslider&amp;view=slide&amp;id=[ITEM:ID]"/>
+        <field name="gallery" type="field"/>
+        <field name="type_name" type="field"/>
+        <field name="enabled" type="published"/>
+        <field name="ordering" type="ordering" labelclass="order"/>
+        <field name="language" type="field" labelclass="order"/>
+	</fieldset>
+</form>

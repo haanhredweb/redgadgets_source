@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>redslider</name>
+    <creationDate>June 2013</creationDate>
+    <copyright>Copyright (C) 2012. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>redComponent</author>
+    <authorEmail>email@redweb.dk</authorEmail>
+    <authorUrl>http://www.redcomponent.com</authorUrl>
+    <version>1.0</version>
+    <description></description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+	
+	<installfile>install.php</installfile> <!-- Runs on install -->
+	
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <administration>
+		<menu img="components/com_redslider/assets/images/redslider-16.png">COM_REDSLIDER</menu>
+        <files folder="administrator">			
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>			
+            <filename>dispatcher.php</filename>
+            <filename>index.html</filename>
+            <filename>redslider.php</filename>
+            <folder>assets</folder>
+			<folder>controllers</folder>            
+			<folder>fields</folder>
+			<folder>images</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            <language tag="en-GB">language/en-GB/en-GB.com_redslider.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_redslider.sys.ini</language>
+        </languages>
+    </administration>
+	
+	 <media folder="media" destination="com_redslider">
+			<filename>index.html</filename>
+			<folder>css</folder>
+			<folder>images</folder>
+			<folder>js</folder>
+	</media>
+</extension>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>redslider module</name>
+	<creationDate>June 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt </license>
+    <author>redComponent</author>
+    <authorEmail>mail@redweb.dk</authorEmail>
+	<authorUrl>www.redcomponent.com</authorUrl>
+	<version>1.0</version>
+	<description>MOD_REDSLIDER_XML_DESCRIPTION</description>
+
+    <files>
+		<filename module="mod_redslider">mod_redslider.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+        <folder>tmpl</folder>
+	</files>
+
+    <languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_redslider.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_redslider.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="gallery" addfieldpath="/administrator/components/com_redslider/fields">
+				<field name="redslider_gallery_id" type="gallerylist" required="required" default=""
+                       label="MOD_REDSLIDER_GALLERY_SELECTION_LABEL"
+                       description="MOD_REDSLIDER_GALLERY_SELECTION_DESC"></field>
+			</fieldset>
+			
+			<fieldset name="style">
+
+                <field name="slide_width" type="text" default=""
+                        label="MOD_REDSLIDER_SLIDEWIDTH_LABEL"
+                        description="MOD_REDSLIDER_SLIDEWIDTH_DESC"/>
+
+                <field name="slide_height" type="text" default=""
+                        label="MOD_REDSLIDER_SLIDEHEIGHT_LABEL"
+                        description="MOD_REDSLIDER_SLIDEHEIGHT_DESC"/>
+
+                <field name="adaptive_height" type="radio" default="1"
+                       label="MOD_REDSLIDER_ADAPTIVEHEIGHT_LABEL"
+                       description="MOD_REDSLIDER_ADAPTIVEHEIGHT_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field name="slide_controls" type="radio" default="1"
+                               label="MOD_REDSLIDER_SLIDECONTROLS_LABEL"
+                               description="MOD_REDSLIDER_SLIDECONTROLS_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field name="pager" type="radio" default="0"
+                       label="MOD_REDSLIDER_PAGER_LABEL"
+                       description="MOD_REDSLIDER_PAGER_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field name="thumbnail" type="radio" default="0"
+                        label="MOD_REDSLIDER_THUMBNAIL_LABEL"
+                        description="MOD_REDSLIDER_THUMBNAIL_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field name="thumbnail_width" type="text" default="100"
+                        label="MOD_REDSLIDER_THUMBNAILWIDTH_LABEL"
+                        description="MOD_REDSLIDER_THUMBNAILWIDTH_DESC"/>
+
+                <field name="thumbnail_height" type="text" default="100"
+                        label="MOD_REDSLIDER_THUMBNAILHEIGHT_LABEL"
+                        description="MOD_REDSLIDER_THUMBNAILHEIGHT_DESC"/>
+
+                <field name="thumbnail_controls" type="radio" default="1"
+                       label="MOD_REDSLIDER_THUMBNAILCONTROLS_LABEL"
+                       description="MOD_REDSLIDER_THUMBNAILCONTROLS_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field name="num_of_thumbnails" type="text" default="4"
+                       label="MOD_REDSLIDER_NUMOFTHUMBNAILS_LABEL"
+                       description="MOD_REDSLIDER_NUMOFTHUMBNAILS_DESC"/>
+
+                <field name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+
+			</fieldset>
+
+            <fieldset name="effect">
+
+                <field name="animation_effect" type="list" default="fade"
+                       label="MOD_REDSLIDER_ANIMATIONEFFECT_LABEL"
+                       description="MOD_REDSLIDER_ANIMATIONEFFECT_DESC">
+                    <option value="fade">Fade</option>
+                    <option value="horizontal">Horizontal</option>
+                    <option value="vertical">Vertical</option>
+                </field>
+
+                <field name="auto_play" type="radio" default="0"
+                       label="MOD_REDSLIDER_AUTOPLAY_LABEL"
+                       description="MOD_REDSLIDER_AUTOPLAY_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field name="pause_when_mouseover" type="radio" default="0"
+                       label="MOD_REDSLIDER_PAUSEWHENMOUSEOVER_LABEL"
+                       description="MOD_REDSLIDER_PAUSEWHENMOUSEOVER_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+
+                <field name="display_time" type="text" default="5000"
+                        label="MOD_REDSLIDER_DISPLAYTIME_LABEL"
+                        description="MOD_REDSLIDER_DISPLAYTIME_DESC"/>
+
+                <field name="transition_duration" type="text" default="1000"
+                        label="MOD_REDSLIDER_TRANSITIONDURATION_LABEL"
+                        description="MOD_REDSLIDER_TRANSITIONDURATION_DESC"/>
+
+            </fieldset>
+
+			<fieldset name="advanced">
+
+                <field name="load_jquery" type="radio" default="1"
+                        label="MOD_REDSLIDER_LOADJQUERY_LABEL"
+                        description="MOD_REDSLIDER_LOADJQUERY_DESC">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                </field>
+
+                <field name="moduleclass_sfx" type="text" default=""
+                        label="MOD_REDSLIDER_MODULESFXCLASS_LABEL"
+                        description="MOD_REDSLIDER_MODULESFXCLASS_LABEL"/>
+
+                <field name="caching" type="list" default="1"
+                        label="MOD_REDSLIDER_CACHING_LABEL"
+                        description="MOD_REDSLIDER_CACHING_DESC">
+                            <option	value="1">JGLOBAL_USE_GLOBAL</option>
+                            <option	value="0">No Caching</option>
+                </field>
+
+                <field name="cachetime" type="text" default="900"
+                        label="MOD_REDSLIDER_CACHETIME_LABEL"
+                        description="MOD_REDSLIDER_CACHETIME_DESC"/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

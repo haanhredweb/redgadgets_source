@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+
+		<fieldset name="advance_params"
+				label="COM_REDSLIDER_FIELDSET_ADVANCE_PARAMS"
+                addfieldpath="/administrator/components/com_redevent/models/fields" >
+
+            <field name="session_id" type="session"
+                   label="COM_REDSLIDER_LABEL_EVENT"
+                   labelclass="redslider-label"
+                   description="COM_REDSLIDER_DESC_EVENT" />
+
+			<field name="event_image" type="media"
+				label="COM_REDSLIDER_LABEL_EVENT_IMAGE"
+                labelclass="redslider-label"
+				description="COM_REDSLIDER_DESC_EVENT_IMAGE" />
+		</fieldset>
+	
+	</fields>
+
+    <fieldset name="advance_params">
+        <field name="redslider_template_id" type="templatepicker"
+               label="COM_REDSLIDER_LABEL_TEMPLATE"
+               description="COM_REDSLIDER_DESC_TEMPLATE"
+               labelclass="redslider-label"
+               section="event"/>
+    </fieldset>
+</form>

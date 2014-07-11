@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/component-install.dtd">
+<extension type="component" version="1.7" method="upgrade">
+	<name>redFORM</name>
+	<creationDate>2013-11-28</creationDate>
+	<author>Redweb.dk</author>
+	<authorEmail>email@redweb.dk</authorEmail>
+	<authorUrl>www.redweb.dk</authorUrl>
+	<copyright>(c) 2008 - 2011 Redweb.dk</copyright>
+	<license>GNU/GPL</license>
+	<version>2.5.b.5.9</version>
+	<description>COM_REDFORM_XML_INSTALL_DESC</description>
+
+	<!-- Runs on install/uninstall/update -->
+	<scriptfile>install.php</scriptfile>
+
+	<!-- SQL queries -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<!-- Uninstall SQL queries -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<update> <!-- Runs on update; New in 1.6 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<!-- Core files site -->
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>redform.php</filename>
+		<filename>redform.core.php</filename>
+		<filename>redform.defines.php</filename>
+		<folder>assets</folder>
+		<folder>classes</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+
+	<!-- Image files -->
+	<!-- These are actually for the administrator but this is not supported
+		by Joomla -->
+	<media folder="media">
+		<folder>com_redform</folder>
+	</media>
+
+	<administration>
+		<!-- Menu entries -->
+		<menu img="../media/com_redform/redform_red_16.png" view="forms">COM_redFORM</menu>
+		<submenu>
+			<menu img="../media/com_redform/redform_red_16.png" view="forms">COM_redFORM_FORMS</menu>
+			<menu img="../media/com_redform/redform_quest_16.png" view="fields">COM_redFORM_Fields</menu>
+			<menu img="../media/com_redform/redform_contes_16.png" view="submitters">COM_redFORM_Submitters</menu>
+		</submenu>
+
+		<!-- Core files admin -->
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>changelog.txt</filename>
+			<filename>controller.php</filename>
+			<filename>LICENSE.php</filename>
+			<filename>redform.php</filename>
+			<filename>config.xml</filename>
+			<folder>controllers</folder>
+			<folder>css</folder>
+			<folder>falang</folder>
+			<folder>helpers</folder>
+			<folder>js</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>plugins</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+	</administration>
+</extension>

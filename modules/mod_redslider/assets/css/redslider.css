@@ -1,0 +1,14 @@
+/*.bx-wrapper .bx-viewport
+{
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}*/
+
+/*.shadow {
+    background: url("../images/box-shadow.png") repeat scroll 0 0 transparent;
+}*/
+
+ul, ol {
+   padding: 0 !important;
+}

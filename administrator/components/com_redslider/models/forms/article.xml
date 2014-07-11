@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+
+		<fieldset name="advance_params"
+				label="COM_REDSLIDER_FIELDSET_ADVANCE_PARAMS"
+                addfieldpath="/administrator/components/com_content/models/fields">
+
+            <field name="article_id" type="modal_article"
+                   label="COM_REDSLIDER_LABEL_ARTICLE"
+                   labelclass="redslider-label"
+                   description="COM_REDSLIDER_DESC_ARTICLE" />
+				
+			<field name="article_image" type="image"
+				label="COM_REDSLIDER_LABEL_ARTICLE_IMAGE"
+                labelclass="redslider-label"
+				description="COM_REDSLIDER_DESC_ARTICLE_IMAGE" />
+		</fieldset>
+	
+	</fields>
+
+    <fieldset name="advance_params">
+        <field name="redslider_template_id" type="templatepicker"
+               label="COM_REDSLIDER_LABEL_TEMPLATE"
+               description="COM_REDSLIDER_DESC_TEMPLATE"
+               labelclass="redslider-label"
+               section="article"/>
+    </fieldset>
+
+
+</form>

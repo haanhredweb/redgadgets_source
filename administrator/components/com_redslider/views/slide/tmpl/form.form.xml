@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form lessfiles="media://com_redslider/css/backend.less||media://com_redslider/css/backend.css">
+    <fieldset name="basic_configuration"
+		        label="COM_REDSLIDER_SLIDES_GROUP_BASIC"
+		        description="COM_REDSLIDER_SLIDES_GROUP_BASIC_DESC"
+		        class="span8">
+
+        <field name="type_name" type="typepicker"
+               class="inputbox"
+               label="COM_REDSLIDER_SLIDES_FIELD_TYPE"
+               labelclass="redslider-label"
+               required="true"
+               size="40"/>
+
+        <field name="type" type="hidden" default="standard"/>
+
+        <field name="title" type="text"
+			    class="inputbox"
+			    label="COM_REDSLIDER_SLIDES_FIELD_TITLE"
+                labelclass="redslider-label"
+			    required="true"
+			    size="40"/>
+
+        <field name="alias" type="text"
+                class="inputbox"
+                label="COM_REDSLIDER_SLIDES_FIELD_ALIAS"
+                labelclass="redslider-label"
+                size="40"/>
+
+        <field name="redslider_gallery_id" type="gallerypicker"
+               class="inputbox"
+               label="COM_REDSLIDER_SLIDES_FIELD_GALLERY"
+               labelclass="redslider-label"
+               required="true"
+               size="1">
+        </field>
+
+		<field name="published" type="list" label="JSTATUS"
+                labelclass="redslider-label"
+			    description="JFIELD_PUBLISHED_DESC" class="inputbox"
+			    filter="intval" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+        <field name="language" type="list"
+                label="COM_REDSLIDER_SLIDES_FIELD_LANGUAGE"
+                labelclass="redslider-label"
+                class="inputbox" filter="intval"
+                size="1" default="1">
+            <option value="All">JAll</option>
+            <option value="English">COM_REDSLIDER_ENGLISH</option>
+        </field>
+
+        <field name="redslider_slide_id" type="text"
+                class="readonly"
+                label="COM_REDSLIDER_SLIDES_FIELD_ID"
+                labelclass="redslider-label"
+                size="40"/>
+	</fieldset>
+</form>
